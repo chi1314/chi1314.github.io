@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Python学习日记Ⅰ-3 | 蓝幽の小屋</title><meta name="author" content="蓝幽呀"><meta name="description" content="生活就是要不断的追求"><meta name="keywords" content="1314"><link rel="icon" href="/images/2.jpg"><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features="></script><link rel="stylesheet" href="/css/particlex.css"><link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="蓝幽の小屋" type="application/atom+xml"></head><body><div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div><div class="door-l" id="l"></div><div class="door-r" id="r"></div><div id="layout"><i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i> <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i> <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i><transition name="into"><div v-show="showpage" style="display:-not-none"><div id="menushow"><nav id="menu"><div class="desktop-menu"><a href="/"><span class="title">蓝幽の小屋</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;首页</span> </a><a href="/archives/"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;归档</span> </a><a href="/categories/"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;分类</span> </a><a href="/tags/"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;标签</span> </a><a href="/about/"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;关于</span> </a><a href="/friendlink/"><i class="fa-solid fa-user-group fa-fw"></i> <span>&ensp;友链</span> </a><a href="/tools/"><i class="fa-solid fa-wrench fa-fw"></i> <span>&ensp;工具</span> </a><a href="/album/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;相册</span> </a><a href="/%E5%BE%AE%E8%AF%AD/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;微语</span></a></div><div :class="'phone-menu ' + menushow" id="phone-menu"><div class="curtain" @click="menushow = !menushow" v-show="menushow"></div><div class="title" @click="menushow = !menushow"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;蓝幽の小屋</span></div><transition name="slide"><div class="items" v-show="menushow"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">首页</div></div></a><a href="/archives/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">归档</div></div></a><a href="/categories/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">分类</div></div></a><a href="/tags/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">标签</div></div></a><a href="/about/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">关于</div></div></a><a href="/friendlink/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-user-group fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">友链</div></div></a><a href="/tools/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-wrench fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">工具</div></div></a><a href="/album/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">相册</div></div></a><a href="/%E5%BE%AE%E8%AF%AD/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">微语</div></div></a></div></transition></div></nav></div><div id="main"><div class="article"><div><h1>Python学习日记Ⅰ-3</h1></div><div class="info"><span class="date"><span class="icon"><svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg> </span>2023/3/3 </span><span class="date"><span class="icon"><i class="fa-solid fa-arrows-rotate"></i> </span>2023/3/3 </span><span class="category"><a href="/categories/python/"><span class="icon"><svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg> </span>python </a></span><span class="tags"><span class="icon"><svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg> </span><span class="tag"><a href="/tags/python/" style="color:#03a9f4">python</a></span></span></div><div class="content" v-pre><h4 id="1-while循环"><a href="#1-while循环" class="headerlink" title="1.while循环"></a>1.while循环</h4><pre><code class="py">i=0
+while i&lt;100:
+    print(&quot;lanyou I like you&quot;)
+    i+=1
+# 练习案例，求1+·····+100的和
+i=0
+sum=0
+while i&lt;=100:
+    sum+=i
+    i+=1
+print(sum)    
+</code></pre><h4 id="2-while猜数字案例"><a href="#2-while猜数字案例" class="headerlink" title="2.while猜数字案例"></a>2.while猜数字案例</h4><pre><code class="py"># 无限次猜测，直到猜中为止
+# 每一次猜不中，会提示大了或者小了
+# 猜玩数字后，提示猜了几次
+import random
+num=random.randint(1,100)
+a=True
+i=0
+while a:
+    gress=int(input(&quot;猜数字(1-100):&quot;))    
+    i+=1
+    if gress==num:
+        a=False
+        print(f&quot;恭喜猜中了，你猜了&#123;i&#125;次&quot;)
+    elif gress&gt;num:
+        print(&quot;猜大了，再猜一次吧&quot;)
+    else:
+        print(&quot;猜小了，再猜一次吧&quot;)         
+</code></pre><h4 id="3-while循环嵌套"><a href="#3-while循环嵌套" class="headerlink" title="3.while循环嵌套"></a>3.while循环嵌套</h4><pre><code class="py"># 每天向蓝幽表白，并且送3朵玫瑰花，累计表白100天成功
+i=0
+while i&lt;=100:
+    print(f&quot;今天是第&#123;i&#125;天表白&quot;)
+    j=1
+    while j&lt;=3:
+        print(f&quot;这是今天送的第&#123;j&#125;朵玫瑰花&quot;)
+        j+=1
+    i+=1
+    print(&quot;蓝幽,I like you&quot;)
+print(f&quot;今天是第&#123;i-1&#125;天表白，终于表白成功了&quot;)        
+</code></pre><h4 id="4-while循环嵌套案例"><a href="#4-while循环嵌套案例" class="headerlink" title="4.while循环嵌套案例"></a>4.while循环嵌套案例</h4><pre><code class="py"># while循环嵌套打印九九乘法表
+i=1
+while i&lt;10:
+    j=1
+    while j&lt;=i:
+        sum=i*j
+        print(f&quot;&#123;i&#125;*&#123;j&#125;=&#123;i*j&#125;\t&quot;,end=&quot;&quot;)
+        j+=1
+    i+=1
+    print() # 换行输出
+</code></pre><h4 id="5-for循环基础语法"><a href="#5-for循环基础语法" class="headerlink" title="5.for循环基础语法"></a>5.for循环基础语法</h4><pre><code class="py"># x为临时变量，这个语句意思是将name中的字符逐个赋予给x打印出来
+# for循环注意点：1.无法定义循环条件，只能被动取出数据处理 2.循环内的语句，需要有空格缩进
+name=&quot;lanyou&quot;
+for x in name:
+    print(x)
+</code></pre><h4 id="6-for循环案例"><a href="#6-for循环案例" class="headerlink" title="6.for循环案例"></a>6.for循环案例</h4><pre><code class="py">#定义字符串变量name，內容为：oritheima is a brand of itcast&quot;
+# 通过for循环，遍历此字符串 lanyoushigeaixuederen，统计有多少个英文字母：&quot;a&quot;
+&quot;&quot;&quot;
+提示：
+1. 计数可以在循环外定义一个整数类型变量用来做累加计数
+2.判断是否为字母&quot;a&quot;，可以通过计语句结合比较运算符来完成
+&quot;&quot;&quot;
+name=&quot;lanyoushigeaixuederen&quot;
+i=0
+for x in name:
+    if x==&quot;a&quot;:
+        i+=1
+print(f&quot;&#123;name&#125;里面有&#123;i&#125;个a&quot;)
+</code></pre><h4 id="7-range语法"><a href="#7-range语法" class="headerlink" title="7.range语法"></a>7.range语法</h4><pre><code class="py"># range是一个序列
+a=range(5)
+print(a)
+for x in a:
+    print(x,)
+a=range(5,10)
+print(a)
+for x in a:
+    print(x,)
+a=range(5,10,2)
+print(a)
+for x in a:
+    print(x,)# 5,7,9 2为步长
+</code></pre><h4 id="8-range使用案例"><a href="#8-range使用案例" class="headerlink" title="8.range使用案例"></a>8.range使用案例</h4><pre><code class="py"># 有几个偶数
+# 定义一个数字变量num，内容随意并使用range(）语句，
+# 获取从1到num的序列，使用for循环遍历它。在遍历的过程中，统计有多少偶数出现
+&quot;&quot;&quot;
+提示：
+1.序列可以使用:range(1, num)得到
+2. 偶数通过计来判断,判断数字余2是否为0即可
+&quot;&quot;&quot;
+num=int(input(&quot;输入一个最大数，必须大于1&quot;))
+i=0
+for x in range(1,num):
+    if x%2==0:
+        i+=1
+print(f&quot;有&#123;i&#125;个偶数&quot;)
+#关于x的作用域问题，本来x的作用域应只在for循环内，但是在python中在域外也能访问到x，这是不符合规范的，
+#如果想用临时变量x，最好在for循环前面定义一个x就像
+x=0
+for x in range(5):
+    print(x)
+print(x)    
+</code></pre><h4 id="9-for循环的嵌套使用"><a href="#9-for循环的嵌套使用" class="headerlink" title="9.for循环的嵌套使用"></a>9.for循环的嵌套使用</h4><pre><code class="py"># 给蓝幽送玫瑰花，每天送10朵，并送一百天，最后表白成功
+i=0
+for i in range(1,101):
+    print(f&quot;今天是我的第&#123;i&#125;天表白，我喜欢你蓝幽&quot;)
+    for j in range(1,11):
+        print(f&quot;这是今天我送的第&#123;j&#125;朵玫瑰花&quot;)
+print(f&quot;今天是第&#123;i&#125;天，蓝幽答应我了&quot;)    
+</code></pre><h4 id="10-for循环嵌套九九乘法表"><a href="#10-for循环嵌套九九乘法表" class="headerlink" title="10.for循环嵌套九九乘法表"></a>10.for循环嵌套九九乘法表</h4><pre><code class="py"># 九九乘法表
+i=1
+for i in range(1,10):
+    j=1
+    for j in range(1,i+1):
+        print(f&quot;&#123;i&#125;*&#123;j&#125;=&#123;i*j&#125;\t&quot;,end=&quot;&quot;)
+        j+=1
+        
+    i+=1
+    print()    
+</code></pre><h4 id="11-continue和break的使用"><a href="#11-continue和break的使用" class="headerlink" title="11.continue和break的使用"></a>11.continue和break的使用</h4><pre><code class="py">&quot;&quot;&quot;
+1.continue的作用是：
+中断所在循环的当次执行，直接进入下一次
+2.break的作用是：
+直接结束所在的循环
+3. 注意事项：
+continue和break，在for和while循环中作用一致
+在嵌套循环中，只能作用在所在的循环上，无法对上层循环
+&quot;&quot;&quot;
+for i in range(3):
+    print(&quot;qqqq&quot;)
+    for j in range(3):
+        print(&quot;www&quot;)  #会循环三次www
+        continue
+        print(&quot;eeeee&quot;)
+    print(&quot;rrrrr&quot;)    
+ 
+for i in range(3):
+    print(&quot;qqqq&quot;)
+    for j in range(3):
+        print(&quot;www&quot;) # 只会循环一次www
+        break
+        print(&quot;eeeee&quot;)
+    print(&quot;rrrrr&quot;) 
+    
+</code></pre><h4 id="12-循环综合案例"><a href="#12-循环综合案例" class="headerlink" title="12.循环综合案例"></a>12.循环综合案例</h4><pre><code class="py"># 发工资
+&quot;&quot;&quot;
+某公司,账户余额有1W元,给20名员工发工资。
+园工编号从1到20 从编号1开始,依次领取工资,每人可领取1000元
+领工资时,财务判断员工的绩效分(1-10)（随机生成）,如果低于5,不发工资,换下一位
+如果工资发完了,结束发工资。
+&quot;&quot;&quot;
+&quot;&quot;&quot;
+提示：
+使用循环对员工依次发放工资
+continue用于跳过员工,break直接结束发工资
+随机数可以用：
+&quot;&quot;&quot;
+import random
+
+b=10000
+i=1
+for i in range(20):
+    a=random.randint(1,10)
+    if a&lt;5:      
+        print(f&quot;员工&#123;i&#125;,绩效分&#123;a&#125;,低于5,不发工资,下一位&quot;)
+        continue
+    elif b==0:
+        print(f&quot;员工&#123;i&#125;,余额为0,没有工资了&quot;) 
+        break   
+    else:
+        b-=1000
+        print(f&quot;员工&#123;i&#125;,绩效分&#123;a&#125;,向员工&#123;i&#125;发放工资1000元,账户余额还有&#123;b&#125;&quot;)    
+        
+</code></pre></div><div id="comments"><div id="twikoo-container"></div></div></div><span class="js-cursor-container"></span><footer id="footer"><div class="footer-wrap"><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("12/25/2022 13:14:21");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="<br />本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒😘"}setInterval("createtime()",250)</script><div>© 2022 - 2023 蓝幽の小屋 <span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>@蓝幽呀</div><div></div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/chi1314/hexo-theme-particlex">ParticleX Theme</a></div><div>备案号： <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">赣ICP备2023002049号</a></div></div></footer></div></div></transition><div id="showimg"><img id="showimg-content" alt="showimg"></div></div><script>window.onload=function(){document.getElementById("l").style.transform="scaleX(0)",document.getElementById("r").style.transform="scaleX(0)"}</script><script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script><script src="/js/yinghuashow.js"></script><script src="/js/%E8%B7%9F%E9%9A%8F%E6%98%9F%E6%98%9F%E7%89%B9%E6%95%88.js"></script><script src="/js/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88.js"></script><script src="/js/function.js"></script><script src="/js/particlex.js"></script><script src="https://cdn.staticfile.org/twikoo/1.6.9/twikoo.all.min.js"></script><script>twikoo.init({el:"#twikoo-container",envId:"https://twikoo.lanyou.me",region:"",path:location.pathname,lang:"zh-CN"})</script><link rel="stylesheet" href="/css/APlayer.min.css"><div data-pjax id="aplayer"></div><script src="/js/APlayer.min.js"></script><script src="/js/%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E5%B1%95%E7%A4%BA.js"></script><script src="/js/%E9%9F%B3%E4%B9%90.js"></script><script src="/js/2.js"></script></body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Python学习日记Ⅰ-4 | 蓝幽の小屋</title><meta name="author" content="蓝幽呀"><meta name="description" content="生活就是要不断的追求"><meta name="keywords" content="1314"><link rel="icon" href="/images/2.jpg"><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features="></script><link rel="stylesheet" href="/css/particlex.css"><link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="蓝幽の小屋" type="application/atom+xml"></head><body><div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div><div class="door-l" id="l"></div><div class="door-r" id="r"></div><div id="layout"><i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i> <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i> <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i><transition name="into"><div v-show="showpage" style="display:-not-none"><div id="menushow"><nav id="menu"><div class="desktop-menu"><a href="/"><span class="title">蓝幽の小屋</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;首页</span> </a><a href="/archives/"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;归档</span> </a><a href="/categories/"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;分类</span> </a><a href="/tags/"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;标签</span> </a><a href="/about/"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;关于</span> </a><a href="/friendlink/"><i class="fa-solid fa-user-group fa-fw"></i> <span>&ensp;友链</span> </a><a href="/tools/"><i class="fa-solid fa-wrench fa-fw"></i> <span>&ensp;工具</span> </a><a href="/album/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;相册</span> </a><a href="/%E5%BE%AE%E8%AF%AD/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;微语</span></a></div><div :class="'phone-menu ' + menushow" id="phone-menu"><div class="curtain" @click="menushow = !menushow" v-show="menushow"></div><div class="title" @click="menushow = !menushow"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;蓝幽の小屋</span></div><transition name="slide"><div class="items" v-show="menushow"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">首页</div></div></a><a href="/archives/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">归档</div></div></a><a href="/categories/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">分类</div></div></a><a href="/tags/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">标签</div></div></a><a href="/about/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">关于</div></div></a><a href="/friendlink/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-user-group fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">友链</div></div></a><a href="/tools/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-wrench fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">工具</div></div></a><a href="/album/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">相册</div></div></a><a href="/%E5%BE%AE%E8%AF%AD/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">微语</div></div></a></div></transition></div></nav></div><div id="main"><div class="article"><div><h1>Python学习日记Ⅰ-4</h1></div><div class="info"><span class="date"><span class="icon"><svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg> </span>2023/3/7 </span><span class="date"><span class="icon"><i class="fa-solid fa-arrows-rotate"></i> </span>2023/3/12 </span><span class="category"><a href="/categories/python/"><span class="icon"><svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg> </span>python </a></span><span class="tags"><span class="icon"><svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg> </span><span class="tag"><a href="/tags/python/" style="color:#ff7d73">python</a></span></span></div><div class="content" v-pre><h4 id="1-len函数"><a href="#1-len函数" class="headerlink" title="1.len函数"></a>1.len函数</h4><pre><code class="py"># len函数：统计字符串长度
+str=&quot;jdskhcn&quot;
+str1=&quot;lanyou&quot;
+print(len(str1))
+# 7
+</code></pre><h4 id="2-自定义函数"><a href="#2-自定义函数" class="headerlink" title="2.自定义函数"></a>2.自定义函数</h4><pre><code class="py"># def 函数定义
+def san():
+    print(&quot;I am lanyou&quot;)
+san()
+</code></pre><h4 id="3-函数传入参数"><a href="#3-函数传入参数" class="headerlink" title="3.函数传入参数"></a>3.函数传入参数</h4><pre><code class="py"># 传参
+def add(x,y):
+    z=x+y
+    print(f&quot;&#123;x&#125;+&#123;y&#125;=&#123;z&#125;&quot;)
+    
+add(2,3)    # 2+3=5
+# 练习案例
+&quot;&quot;&quot;
+练习案例：升级版自动查核酸
+定义一个函数，名称任意，并接受一个参数传入（数字类型，表示体温）
+在函数内进行体温判断 （正常范围：小于等于37.5度），并输出如下内容：
+欢迎来到黑马程序员！请出示您的健康码以及72小时核酸证明，并配合测量体温！
+体温测量中，您的体温是：37.3度，体温正常请进！
+欢迎来到黑马程序员！请出示您的健康码以及72小时核酸证明，并配合测量体温！
+体温测量中，您的体温是：39.3度，需要隔离！
+&quot;&quot;&quot;
+def show(a):
+    if a&lt;37.5:
+        print(&quot;体温正常&quot;)  
+    else:
+        print(&quot;体温异常&quot;)
+        
+b=float(input(&quot;请输入你的体温&quot;))
+show(b) 
+# 注意，有参数值的必须放在列表最右边
+# def fun(a=3,b,c):
+ #   print(a,b,c) 会出现报错
+def fun(a,b,c=7):
+    print(a,b,c) # 成功    
+</code></pre><h4 id="4-return"><a href="#4-return" class="headerlink" title="4.return"></a>4.return</h4><h1 id="函数return的应用"><a href="#函数return的应用" class="headerlink" title="函数return的应用"></a>函数return的应用</h1><pre><code class="py">def add(a,b):
+    c=a+b
+    return c
+x=add(3,4)
+print(x)
+# 返回值之none类型
+def say():
+    print(&quot;lanyou&quot;)
+    return None
+a=say()
+print(f&quot;无返回值的函数，返回的内容是&#123;a&#125;&quot;)
+print(f&quot;无返回值的函数，返回的类型是&#123;type(a)&#125;&quot;)
+def check_age(age):
+    if age&gt;18:
+        return &quot;已成年&quot;
+    else:
+        return None
+b=check_age(19)
+# 在if语句中none=false 有返回值则为true
+if  not b:
+    print(&quot;未成年，不能进入&quot;) 
+else:
+    print(&quot;qingjin&quot;)
+# none还可以符给变量为空值
+name=None          
+</code></pre><h4 id="5-函数说明文档"><a href="#5-函数说明文档" class="headerlink" title="5.函数说明文档"></a>5.函数说明文档</h4><pre><code class="py">def add(x,y):
+    &quot;&quot;&quot;
+    两数相加
+    :param x:相加的第一个数字
+    :param y:相加的第二个数字
+    :return: 返回相加的结果 
+    
+    &quot;&quot;&quot;
+    z=x+y
+    return z
+add(1,3)#加了注释之后有鼠标悬停查看解释的效果
+</code></pre><h4 id="6-函数的嵌套调用"><a href="#6-函数的嵌套调用" class="headerlink" title="6.函数的嵌套调用"></a>6.函数的嵌套调用</h4><pre><code class="py"># 函数的嵌套调用是从上往下执行的
+def a():
+    print(&quot;a&quot;)
+def b():
+    print(&quot;b&quot;)
+    a()
+    print(&quot;c&quot;)
+b() # 结果为b a c       
+# 作用域
+# 变量在函数内的话，则这个变量不能在函数以外被调用
+# 变量在函数外的话，则这个变量为全局变量，都可以被调用
+a=200
+def sum():
+    a=100
+    print(a)
+    
+print(a)# 200 说明这个函数不会改变全局变量a的值
+def sum1():
+    global a
+    a=500
+    print(a)# 500
+    
+sum()# 100
+sum1()# 500
+print(a) # 500，加了global说明调用了全局变量可以修改了
+</code></pre><h4 id="7-函数使用综合案例ATM"><a href="#7-函数使用综合案例ATM" class="headerlink" title="7.函数使用综合案例ATM"></a>7.函数使用综合案例ATM</h4><pre><code class="py">&quot;&quot;&quot;
+综合案例：黑马ATM
+• 定义一个全局变量：money，用来记录银行卡余额（默认5000000）
+定义一个全局变量：name，用来记录客户姓名（启动程序时输入）
+定义如下的函数：
+查询余额函数
+存款函数
+取款函数
+主菜单函数
+要求：
+程序启动后要求输入客户姓名
+查询余额、存款、取款后都会返回主菜单
+存款、取款后，都应显示一下当前余额
+客户选择退出或输入错误，程序会退出，否则一直运行
+&quot;&quot;&quot; 
+money=2000
+def yue(): 
+    global money
+    global name
+    print(f&quot;姓名：&#123;name&#125;:&quot;)
+    print(f&quot;余额：&#123;money&#125;&quot;)
+def cungaun():
+    z=int(input(&quot;输入你要存取的金额：&quot;))
+    global money
+    money+=z
+    print(&quot;存取成功&quot;) 
+    yue()  
+def qukuan():
+    x=int(input(&quot;请输入你要取走的金额：&quot;))
+    global money
+    money-=x
+    print(&quot;请拿走现金&quot;)
+    yue()
+def main():
+    print(&quot;1.余额&quot;)
+    print(&quot;2.存款&quot;)
+    print(&quot;3.取款&quot;)
+    print(&quot;4.退出&quot;)
+    y=int(input(&quot;请选择你要进行的的操作：&quot;))
+    if y==1:
+        yue()
+        return main()
+    elif y==2:
+        cungaun() 
+        return main()
+    elif y==3:
+        qukuan() 
+        return main()
+    elif y==4:
+        print(&quot;欢迎下次使用&quot;)
+    else:
+        return &quot;输入错误&quot; 
+name=input(&quot;请输入你的姓名：&quot;)
+print(f&quot;欢迎&#123;name&#125;&quot;)
+main()    
+</code></pre></div><div id="comments"><div id="twikoo-container"></div></div></div><span class="js-cursor-container"></span><footer id="footer"><div class="footer-wrap"><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("12/25/2022 13:14:21");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="<br />本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒😘"}setInterval("createtime()",250)</script><div>© 2022 - 2023 蓝幽の小屋 <span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>@蓝幽呀</div><div></div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/chi1314/hexo-theme-particlex">ParticleX Theme</a></div><div>备案号： <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">赣ICP备2023002049号</a></div></div></footer></div></div></transition><div id="showimg"><img id="showimg-content" alt="showimg"></div></div><script>window.onload=function(){document.getElementById("l").style.transform="scaleX(0)",document.getElementById("r").style.transform="scaleX(0)"}</script><script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script><script src="/js/yinghuashow.js"></script><script src="/js/%E8%B7%9F%E9%9A%8F%E6%98%9F%E6%98%9F%E7%89%B9%E6%95%88.js"></script><script src="/js/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88.js"></script><script src="/js/function.js"></script><script src="/js/particlex.js"></script><script src="https://cdn.staticfile.org/twikoo/1.6.9/twikoo.all.min.js"></script><script>twikoo.init({el:"#twikoo-container",envId:"https://twikoo.lanyou.me",region:"",path:location.pathname,lang:"zh-CN"})</script><link rel="stylesheet" href="/css/APlayer.min.css"><div data-pjax id="aplayer"></div><script src="/js/APlayer.min.js"></script><script src="/js/%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E5%B1%95%E7%A4%BA.js"></script><script src="/js/%E9%9F%B3%E4%B9%90.js"></script><script src="/js/2.js"></script></body></html>
