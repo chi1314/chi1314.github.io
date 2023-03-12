@@ -6,7 +6,7 @@
   <link href="https://chi1314.github.io/atom.xml" rel="self"/>
   
   <link href="https://chi1314.github.io/"/>
-  <updated>2023-03-12T07:28:18.676Z</updated>
+  <updated>2023-03-12T13:54:30.603Z</updated>
   <id>https://chi1314.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python学习日记Ⅰ-6</title>
+    <link href="https://chi1314.github.io/2023/03/12/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%E2%85%A0-6/"/>
+    <id>https://chi1314.github.io/2023/03/12/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%E2%85%A0-6/</id>
+    <published>2023-03-12T13:51:23.000Z</published>
+    <updated>2023-03-12T13:54:30.603Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="函数的进阶使用"><a href="#函数的进阶使用" class="headerlink" title="函数的进阶使用"></a>函数的进阶使用</h1><h4 id="1-函数的多返回值"><a href="#1-函数的多返回值" class="headerlink" title="1.函数的多返回值"></a>1.函数的多返回值</h4><pre><code class="py">def fun():    return 1,2,3a,b,c=fun()print(a)# 1print(b)# 2print(c)# 3</code></pre><h4 id="2-函数的多种参数使用"><a href="#2-函数的多种参数使用" class="headerlink" title="2.函数的多种参数使用"></a>2.函数的多种参数使用</h4><pre><code class="py"># 1.位置参数  2.关键字参数  3.缺省参数  4.不定长参数def fun(name,age,gender):    print(f&quot;姓名：&#123;name&#125; 年龄：&#123;age&#125; 性别：&#123;gender&#125;&quot;)# 1.位置参数fun(&quot;蓝幽&quot;,&quot;22&quot;,&quot;男&quot;)# 姓名：蓝幽 年龄：22 性别：男#2.关键字参数fun(age=21,name=&quot;lanyou&quot;,gender=&quot;男&quot;)  #姓名：蓝幽 年龄：22 性别：男 一样的结果，但是可以乱序#3.缺省参数，注意，默认值一直要放到函数括号内后面，否则会报错def fun1(name,age,gender=&quot;男&quot;):    print(f&quot;姓名：&#123;name&#125; 年龄：&#123;age&#125; 性别：&#123;gender&#125;&quot;)fun1(&quot;lanyou&quot;,22)#   姓名：蓝幽 年龄：22 性别：男  因为有默认值，使用不需要为性别传参数# 4.不定长参数 可以传入任意个参数，但输出为元组形式def fun2(*args):    print(args)fun2(1,2,3,4,&quot;name&quot;) #(1, 2, 3, 4, &#39;name&#39;)# 这种两个*的不定长同样可以传任意个参数，但必须为键值对的形式，输出为字典的形式def fun3(**kwargs):    print(kwargs)   fun3(name=&quot;lanyou&quot;,age=23,gender=&quot;男&quot;)#&#123;&#39;name&#39;: &#39;lanyou&#39;, &#39;age&#39;: 23, &#39;gender&#39;: &#39;男&#39;&#125; </code></pre><h4 id="3-作为参数传递"><a href="#3-作为参数传递" class="headerlink" title="3.作为参数传递"></a>3.作为参数传递</h4><pre><code class="py">def fun(x,y):    return x+ydef fun1(fun):    a=fun(1,2)  # 传入函数，也就是逻辑结构，往常传入的是数据    print(a)fun1(fun)       </code></pre><h4 id="4-lambda匿名函数"><a href="#4-lambda匿名函数" class="headerlink" title="4.lambda匿名函数"></a>4.lambda匿名函数</h4><pre><code class="py">#lambdy 参数: 函数体def fun(an):    b=an(1,2)    print(b)fun(lambda x,y:x+y )#更加简洁    </code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;函数的进阶使用&quot;&gt;&lt;a href=&quot;#函数的进阶使用&quot; class=&quot;headerlink&quot; title=&quot;函数的进阶使用&quot;&gt;&lt;/a&gt;函数的进阶使用&lt;/h1&gt;&lt;h4 id=&quot;1-函数的多返回值&quot;&gt;&lt;a href=&quot;#1-函数的多返回值&quot; class=&quot;header</summary>
+      
+    
+    
+    
+    <category term="python" scheme="https://chi1314.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://chi1314.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python学习日记Ⅰ-5</title>
