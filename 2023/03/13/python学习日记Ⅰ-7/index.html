@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Python学习日记Ⅰ-7 | 蓝幽の小屋</title><meta name="author" content="蓝幽呀"><meta name="description" content="生活就是要不断的追求"><meta name="keywords" content="1314"><link rel="icon" href="/images/2.jpg"><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features="></script><link rel="stylesheet" href="/css/particlex.css"><link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="蓝幽の小屋" type="application/atom+xml"></head><body><div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div><div class="door-l" id="l"></div><div class="door-r" id="r"></div><div id="layout"><i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i> <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i> <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i><transition name="into"><div v-show="showpage" style="display:-not-none"><div id="menushow"><nav id="menu"><div class="desktop-menu"><a href="/"><span class="title">蓝幽の小屋</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;首页</span> </a><a href="/archives/"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;归档</span> </a><a href="/categories/"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;分类</span> </a><a href="/tags/"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;标签</span> </a><a href="/about/"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;关于</span> </a><a href="/friendlink/"><i class="fa-solid fa-user-group fa-fw"></i> <span>&ensp;友链</span> </a><a href="/tools/"><i class="fa-solid fa-wrench fa-fw"></i> <span>&ensp;工具</span> </a><a href="/album/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;相册</span> </a><a href="/%E5%BE%AE%E8%AF%AD/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;微语</span></a></div><div :class="'phone-menu ' + menushow" id="phone-menu"><div class="curtain" @click="menushow = !menushow" v-show="menushow"></div><div class="title" @click="menushow = !menushow"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;蓝幽の小屋</span></div><transition name="slide"><div class="items" v-show="menushow"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">首页</div></div></a><a href="/archives/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">归档</div></div></a><a href="/categories/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">分类</div></div></a><a href="/tags/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">标签</div></div></a><a href="/about/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">关于</div></div></a><a href="/friendlink/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-user-group fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">友链</div></div></a><a href="/tools/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-wrench fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">工具</div></div></a><a href="/album/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">相册</div></div></a><a href="/%E5%BE%AE%E8%AF%AD/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">微语</div></div></a></div></transition></div></nav></div><div id="main"><div class="article"><div><h1>Python学习日记Ⅰ-7</h1></div><div class="info"><span class="date"><span class="icon"><svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg> </span>2023/3/13 </span><span class="date"><span class="icon"><i class="fa-solid fa-arrows-rotate"></i> </span>2023/3/13</span></div><div class="content" v-pre><h4 id="1-文件的读取和写入"><a href="#1-文件的读取和写入" class="headerlink" title="1.文件的读取和写入"></a>1.文件的读取和写入</h4><pre><code class="py"># 打开文件
+f=open(&quot;/Users/cengxianming/Desktop/python-idle/python第一章/第一章（1）/1.type使用.py&quot;,&quot;r&quot;,encoding=&quot;UTF-8&quot;)
+# line=f.read(20)
+#print(line) 读取前20个字节
+#print(f.read()) 读取全部字节 输出类型为io-文件
+
+# lines=f.readlines()# 读取文件的全部行，并封装到列表
+# print(lines)  #输出为列表
+# 输出单行列表
+# lines1=f.readline()
+#print(lines1) #只输出一行，且输出为列表
+
+# for循环读取文件
+for x in f:
+    print(f&quot;每一回数据&#123;x&#125;&quot;) #这个为单行单行的读
+f.close()# 如果不关闭，此文件将一直被占用
+
+#with open() 带有自动关闭功能
+with open(&quot;/Users/cengxianming/Desktop/python-idle/python第一章/第一章（1）/1.type使用.py&quot;,&quot;r&quot;,encoding=&quot;UTF-8&quot;) as lin:
+    for y in lin:
+        print(y)
+</code></pre><img src="python7.jpg"><h4 id="2-判断单词出现累计"><a href="#2-判断单词出现累计" class="headerlink" title="2.判断单词出现累计"></a>2.判断单词出现累计</h4><pre><code class="py">f=open(&quot;python第一章/第一章（1）/1.type使用.py&quot;,&quot;r&quot;,encoding=&quot;UTF-8&quot;)
+# 全部读取
+#num=f.read()
+#print(num.count(&quot;n&quot;))
+# 5
+
+# 一行一行读取
+
+nun1=0
+for x in f:
+   x=x.strip() # 直接调用本身，去除里面的前后空格和换行符
+   y=x.strip(&quot;&quot;)# 将每个单词用空格分隔开，在匹配
+   print(y)
+   for z in y :
+       if z==&quot;t&quot;:# 问题：这里只能索引单个字符
+           nun1+=1
+print(f&quot;print出现&#123;nun1&#125;次&quot;)            
+f.close()
+</code></pre><h4 id="3-文件的写入操作"><a href="#3-文件的写入操作" class="headerlink" title="3.文件的写入操作"></a>3.文件的写入操作</h4><pre><code class="py">f=open(&quot;python第一章/第一章（7）/1.txt&quot;,&quot;w&quot;,encoding=&quot;UTF-8&quot;)
+f.write(&quot;hello world&quot;)# 清空文件内的内容，然后添加对应字段，如果对应路径没有此文件，会自动创建文件
+f.flush()# 刷新文件内容
+f.close()# 档close存在时，flush可以不写，close运行自动刷新
+</code></pre><img src="file-write.jpg"><h4 id="4-文件的追加操作"><a href="#4-文件的追加操作" class="headerlink" title="4.文件的追加操作"></a>4.文件的追加操作</h4><pre><code class="py">f=open(&quot;python第一章/第一章（7）/1.txt&quot;,&quot;a&quot;,encoding=&quot;UTF-8&quot;)
+f.write(&quot;I like you&quot;) # 这种方式也是写入文件，不会改变原文件内容，在原文件最后加入对应字符
+f.flush()
+
+# 换行追加
+f.write(&quot;\n蓝幽&quot;)
+f.close
+</code></pre><h4 id="5-文件操作练习案例"><a href="#5-文件操作练习案例" class="headerlink" title="5.文件操作练习案例"></a>5.文件操作练习案例</h4><pre><code class="py">&quot;&quot;&quot;
+open和r模式打开一个文件对象，并读取文件
+open和w模式打开另-个文件对象，用于文件写出
+for循环内容，判断是否是测试不是测试就write写出，是测试就continue跳过
+将2个文件对象均close (
+&quot;&quot;&quot;
+# 打开文件名读取
+fr=open(&quot;python第一章/第一章（7）/2.txt&quot;,&quot;r&quot;,encoding=&quot;UTF-8&quot;)
+# 打开文件写入
+fw=open(&quot;python第一章/第一章（7）/3.txt&quot;,&quot;w&quot;,encoding=&quot;UTF-8&quot;)
+# 循环读取文件
+for x in fr:
+    x=x.strip()
+   
+    if x.split(&quot;,&quot;)[4]==&quot;测试&quot;:# split分割后变为列表
+        continue
+    fw.write(x)
+    fw.write(&quot;\n&quot;)
+fr.close()
+fw.close()    
+</code></pre></div><div id="comments"><div id="twikoo-container"></div></div></div><span class="js-cursor-container"></span><footer id="footer"><div class="footer-wrap"><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("12/25/2022 13:14:21");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="<br />本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒😘"}setInterval("createtime()",250)</script><div>© 2022 - 2023 蓝幽の小屋 <span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>@蓝幽呀</div><div></div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/chi1314/hexo-theme-particlex">ParticleX Theme</a></div><div>备案号： <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">赣ICP备2023002049号</a></div></div></footer></div></div></transition><div id="showimg"><img id="showimg-content" alt="showimg"></div></div><script>window.onload=function(){document.getElementById("l").style.transform="scaleX(0)",document.getElementById("r").style.transform="scaleX(0)"}</script><script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script><script src="/js/yinghuashow.js"></script><script src="/js/%E8%B7%9F%E9%9A%8F%E6%98%9F%E6%98%9F%E7%89%B9%E6%95%88.js"></script><script src="/js/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88.js"></script><script src="/js/function.js"></script><script src="/js/particlex.js"></script><script src="https://cdn.staticfile.org/twikoo/1.6.9/twikoo.all.min.js"></script><script>twikoo.init({el:"#twikoo-container",envId:"https://twikoo.lanyou.me",region:"",path:location.pathname,lang:"zh-CN"})</script><link rel="stylesheet" href="/css/APlayer.min.css"><div data-pjax id="aplayer"></div><script src="/js/APlayer.min.js"></script><script src="/js/%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E5%B1%95%E7%A4%BA.js"></script><script src="/js/%E9%9F%B3%E4%B9%90.js"></script><script src="/js/2.js"></script></body></html>
