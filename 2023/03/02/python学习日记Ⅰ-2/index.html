@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Python学习日记Ⅰ-2 | 蓝幽の小屋</title><meta name="author" content="蓝幽呀"><meta name="description" content="生活就是要不断的追求"><meta name="keywords" content="1314"><link rel="icon" href="/images/2.jpg"><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features="></script><link rel="stylesheet" href="/css/particlex.css"><link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="蓝幽の小屋" type="application/atom+xml"></head><body><div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div><div class="door-l" id="l"></div><div class="door-r" id="r"></div><div id="layout"><i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i> <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i> <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i><transition name="into"><div v-show="showpage" style="display:-not-none"><div id="menushow"><nav id="menu"><div class="desktop-menu"><a href="/"><span class="title">蓝幽の小屋</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;首页</span> </a><a href="/archives/"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;归档</span> </a><a href="/categories/"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;分类</span> </a><a href="/tags/"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;标签</span> </a><a href="/about/"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;关于</span> </a><a href="/friendlink/"><i class="fa-solid fa-user-group fa-fw"></i> <span>&ensp;友链</span> </a><a href="/tools/"><i class="fa-solid fa-wrench fa-fw"></i> <span>&ensp;工具</span> </a><a href="/album/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;相册</span> </a><a href="/%E5%BE%AE%E8%AF%AD/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;微语</span></a></div><div :class="'phone-menu ' + menushow" id="phone-menu"><div class="curtain" @click="menushow = !menushow" v-show="menushow"></div><div class="title" @click="menushow = !menushow"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;蓝幽の小屋</span></div><transition name="slide"><div class="items" v-show="menushow"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">首页</div></div></a><a href="/archives/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">归档</div></div></a><a href="/categories/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">分类</div></div></a><a href="/tags/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">标签</div></div></a><a href="/about/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">关于</div></div></a><a href="/friendlink/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-user-group fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">友链</div></div></a><a href="/tools/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-wrench fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">工具</div></div></a><a href="/album/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">相册</div></div></a><a href="/%E5%BE%AE%E8%AF%AD/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">微语</div></div></a></div></transition></div></nav></div><div id="main"><div class="article"><div><h1>Python学习日记Ⅰ-2</h1></div><div class="info"><span class="date"><span class="icon"><svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg> </span>2023/3/2 </span><span class="date"><span class="icon"><i class="fa-solid fa-arrows-rotate"></i> </span>2023/3/9 </span><span class="category"><a href="/categories/python/"><span class="icon"><svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg> </span>python </a></span><span class="tags"><span class="icon"><svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg> </span><span class="tag"><a href="/tags/python/" style="color:#ff7d73">python</a></span></span></div><div class="content" v-pre><h4 id="1-布尔类型和比较运算符"><a href="#1-布尔类型和比较运算符" class="headerlink" title="1.布尔类型和比较运算符"></a>1.布尔类型和比较运算符</h4><pre><code class="bash">
+bool1=True
+bool2=False
+print(f&quot;bool1变量内容为:&#123;bool1&#125;,类型为&#123;type(bool1)&#125;&quot;)
+print(f&quot;bool1变量内容为:&#123;bool2&#125;,类型为&#123;type(bool2)&#125;&quot;)
+# 比较运算符
+name=1
+name1=2
+print(name==name1)
+print(name&gt;name1)
+print(name&gt;=name1)
+print(name&lt;name1)
+print(name&lt;=name1)
+print(name!=name1)
+</code></pre><h4 id="2-if语句嵌套"><a href="#2-if语句嵌套" class="headerlink" title="2.if语句嵌套"></a>2.if语句嵌套</h4><pre><code class="bash"># if语句基本格式，注意冒号和print前面的四个空格
+age=20
+if age&gt;18:
+    print(&quot;我不错&quot;)
+# if else组合语句
+&quot;&quot;&quot;
+age1= int(input(&quot;请输入你的年龄&quot;))
+if age1&gt;18:
+    print(&quot;你需要10元买票&quot;)
+else:
+    print(&quot;可以免费&quot;)
+&quot;&quot;&quot;     
+# if elif else组合语句
+# 这样有一个缺点，就是必须三个变量都需要输入
+&quot;&quot;&quot;
+a=int(input(&quot;你的身高是(cm):&quot;))
+b=int(input(&quot;你的vip等级是(1-5):&quot;))
+c=int(input(&quot;今天是几号：&quot;))
+if a&lt;120:
+    print(&quot;免费&quot;)
+elif b&gt;3:
+    print(&quot;也免费&quot;) 
+elif c==1:
+    print(&quot;1号免费&quot;)    
+else:
+    print(&quot;请付10元&quot;) 
+# 改进，这样有符合要求的就可以直接停止
+if int(input(&quot;你的身高是(cm):&quot;))&lt;120:
+    print(&quot;免费&quot;)
+elif int(input(&quot;你的vip等级是(1-5):&quot;))&gt;3:
+    print(&quot;也免费&quot;) 
+elif int(input(&quot;今天是几号：&quot;))==1:
+    print(&quot;1号免费&quot;)    
+else:
+    print(&quot;请付10元&quot;)
+&quot;&quot;&quot;    
+# if语句嵌套使用
+if int(input(&quot;你的身高是:&quot;))&gt;120:
+    print(&quot;你的vip等级是:&quot;)
+    if int(input())&gt;3:
+        print(&quot;可以进去了&quot;)
+    else:
+        print(&quot;等级不够&quot;)
+else:
+    print(&quot;小朋友，进去吧&quot;)            
+</code></pre><h4 id="3-if语句嵌套练习"><a href="#3-if语句嵌套练习" class="headerlink" title="3.if语句嵌套练习"></a>3.if语句嵌套练习</h4><pre><code class="bash"># 1.必须是大于等于18岁小于30岁的成年人
+# 2.同时入职时间需大于两年，或者级别大于三才可以领取
+age=int(input(&quot;你的年龄是多少：&quot;))
+if age&gt;=18:
+    if age&lt;30:
+        print(&quot;你符合年龄条件&quot;)
+        print(&quot;你入职几年了&quot;)
+        if int(input())&gt;=2:  
+            print(&quot;来领取礼物吧&quot;)
+        elif int(input(&quot;你的vip等级是:&quot;))&gt;3:  
+            print(&quot;你可以领取礼物&quot;)
+        else:
+            print(&quot;条件不够,并且等级不够&quot;) 
+    else:
+        print(&quot;年龄不符&quot;)                 
+else:
+    print(&quot;年龄不够，不能领取礼物，但有红包欧&quot;) 
+</code></pre><h4 id="4-jjjjj"><a href="#4-jjjjj" class="headerlink" title="4.jjjjj"></a>4.jjjjj</h4><pre><code class="bash"># 数字随机参生，范围1-10
+# 有三次机会猜数字，通过三层嵌套实现
+# 每次猜不中，会提示大了或者小了
+import random
+num=random.randint(1,10)
+a=num
+
+num1=int(input(&quot;猜猜我是几(1-10):&quot;))
+
+if num1==a:
+    print(&quot;猜对了&quot;)
+   
+elif num1&gt;a:
+        print(&quot;猜大了&quot;)
+        print(&quot;再猜一次吧&quot;)
+        num2=int(input(&quot;猜猜我是几(1-10):&quot;))
+        if num2==a:
+            print(&quot;猜对了&quot;)
+        elif num2&gt;a:
+            print(&quot;猜大了&quot;)
+            print(&quot;再猜一次吧&quot;)
+            num3=int(input(&quot;猜猜我是几(1-10):&quot;)) 
+            print()  
+            if num3==a:
+                print(&quot;猜对了&quot;)
+            elif num3&gt;a:
+                print(&quot;猜大了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a) 
+            elif num3&lt;a:
+                print(&quot;猜小了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)
+        elif num2&lt;a:
+            print(&quot;猜小了&quot;)
+            print(&quot;再猜一次吧&quot;)
+            num3=int(input(&quot;猜猜我是几(1-10):&quot;))
+            if num3==a:
+                print(&quot;猜对了&quot;)
+            elif num3&gt;a:
+                print(&quot;猜大了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)     
+            elif num3&lt;a:
+                print(&quot;猜小了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)       
+
+            
+elif num1&lt;a:
+        print(&quot;猜小了&quot;)
+        print(&quot;再猜一次吧&quot;)
+        num2=int(input(&quot;猜猜我是几(1-10):&quot;))
+        if num2==a:
+            print(&quot;猜对了&quot;)
+        elif num2&gt;a:
+            print(&quot;猜大了&quot;)
+            print(&quot;再猜一次吧&quot;)
+            num3=int(input(&quot;猜猜我是几(1-10):&quot;))
+            if num3==a:
+                print(&quot;猜对了&quot;)
+            elif num3&gt;a:
+                print(&quot;猜大了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)     
+            elif num3&lt;a:
+                print(&quot;猜小了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)
+        elif num2&lt;a:
+            print(&quot;猜小了&quot;)
+            print(&quot;再猜一次吧&quot;)
+            num3=int(input(&quot;猜猜我是几(1-10):&quot;))
+            if num3==a:
+                print(&quot;猜对了&quot;)
+            elif num3&gt;a:
+                print(&quot;猜大了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)     
+            elif num3&lt;a:
+                print(&quot;猜小了&quot;)
+                print(&quot;没有机会了欧，答案是:&quot;,a)
+</code></pre></div><div id="comments"><div id="twikoo-container"></div></div></div><span class="js-cursor-container"></span><footer id="footer"><div class="footer-wrap"><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("12/25/2022 13:14:21");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="<br />本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒😘"}setInterval("createtime()",250)</script><div>© 2022 - 2023 蓝幽の小屋 <span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>@蓝幽呀</div><div></div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/chi1314/hexo-theme-particlex">ParticleX Theme</a></div><div>备案号： <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">赣ICP备2023002049号</a></div></div><div style="width:300px;margin:0 auto;padding:0 0"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36098102000253" style="display:inline-block;text-decoration:none;height:20px;line-height:20px"><img src="./image/备案图标.png" style="float:left"><p style="float:left;height:20px;line-height:20px;margin:0 0 0 5px;color:#939393">赣公网安备 36098102000253号</p></a></div></footer></div></div></transition><div id="showimg"><img id="showimg-content" alt="showimg"></div></div><script>window.onload=function(){document.getElementById("l").style.transform="scaleX(0)",document.getElementById("r").style.transform="scaleX(0)"}</script><script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script><script src="/js/sakura.js"></script><script src="/js/%E8%B7%9F%E9%9A%8F%E6%98%9F%E6%98%9F%E7%89%B9%E6%95%88.js"></script><script src="/js/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88.js"></script><script src="/js/function.js"></script><script src="/js/particlex.js"></script><script src="https://cdn.staticfile.org/twikoo/1.6.9/twikoo.all.min.js"></script><script>twikoo.init({el:"#twikoo-container",envId:"https://twikoo.lanyou.me",region:"",path:location.pathname,lang:"zh-CN"})</script><div class="aa"></div><div class="aa1"></div><div class="aa2"></div><div class="aa3"></div><div class="aa4"></div><div class="aa5"></div><div class="aa6"></div><div class="aa7"></div><link rel="stylesheet" href="/css/APlayer.min.css"><div data-pjax id="aplayer"></div><script src="/js/APlayer.min.js"></script><script src="/js/%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E5%B1%95%E7%A4%BA.js"></script><script src="/js/%E9%9F%B3%E4%B9%90.js"></script><script src="/js/2.js"></script></body></html>

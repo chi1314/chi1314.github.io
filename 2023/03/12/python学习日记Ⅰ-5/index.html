@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>Python学习日记Ⅰ-5 | 蓝幽の小屋</title><meta name="author" content="蓝幽呀"><meta name="description" content="生活就是要不断的追求"><meta name="keywords" content="1314"><link rel="icon" href="/images/2.jpg"><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features="></script><link rel="stylesheet" href="/css/particlex.css"><link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="蓝幽の小屋" type="application/atom+xml"></head><body><div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div><div class="door-l" id="l"></div><div class="door-r" id="r"></div><div id="layout"><i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i> <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i> <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i><transition name="into"><div v-show="showpage" style="display:-not-none"><div id="menushow"><nav id="menu"><div class="desktop-menu"><a href="/"><span class="title">蓝幽の小屋</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;首页</span> </a><a href="/archives/"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;归档</span> </a><a href="/categories/"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;分类</span> </a><a href="/tags/"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;标签</span> </a><a href="/about/"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;关于</span> </a><a href="/friendlink/"><i class="fa-solid fa-user-group fa-fw"></i> <span>&ensp;友链</span> </a><a href="/tools/"><i class="fa-solid fa-wrench fa-fw"></i> <span>&ensp;工具</span> </a><a href="/album/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;相册</span> </a><a href="/%E5%BE%AE%E8%AF%AD/"><i class="fa-solid fa-gift fa-fw"></i> <span>&ensp;微语</span></a></div><div :class="'phone-menu ' + menushow" id="phone-menu"><div class="curtain" @click="menushow = !menushow" v-show="menushow"></div><div class="title" @click="menushow = !menushow"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;蓝幽の小屋</span></div><transition name="slide"><div class="items" v-show="menushow"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">首页</div></div></a><a href="/archives/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">归档</div></div></a><a href="/categories/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">分类</div></div></a><a href="/tags/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">标签</div></div></a><a href="/about/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">关于</div></div></a><a href="/friendlink/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-user-group fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">友链</div></div></a><a href="/tools/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-wrench fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">工具</div></div></a><a href="/album/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">相册</div></div></a><a href="/%E5%BE%AE%E8%AF%AD/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-gift fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">微语</div></div></a></div></transition></div></nav></div><div id="main"><div class="article"><div><h1>Python学习日记Ⅰ-5</h1></div><div class="info"><span class="date"><span class="icon"><svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg> </span>2023/3/12 </span><span class="date"><span class="icon"><i class="fa-solid fa-arrows-rotate"></i> </span>2023/3/13 </span><span class="category"><a href="/categories/python/"><span class="icon"><svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg> </span>python </a></span><span class="tags"><span class="icon"><svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg> </span><span class="tag"><a href="/tags/python/" style="color:#03a9f4">python</a></span></span></div><div class="content" v-pre><img src="python5.png"><h4 id="1-数据容器list"><a href="#1-数据容器list" class="headerlink" title="1.数据容器list"></a>1.数据容器list</h4><pre><code class="py"># 列表语法,列表内不限制类型
+name=[&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;]
+# 列表索引
+print(name[0])# lan
+print(name[-1])# you
+print(name[-2])# like
+print(name[1]) # you
+# 列表嵌套
+a=[[1,2,3],[5,6,7]]
+print(a[1][1]) # 6
+</code></pre><h4 id="2-list的常用操作"><a href="#2-list的常用操作" class="headerlink" title="2.list的常用操作"></a>2.list的常用操作</h4><pre><code class="py"># 类似mysql增删改查操作
+
+#1. list 查找下标函数index()，查操作
+name=[&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;]
+a=name.index(&quot;I&quot;) # 查找I的下标为多少
+print(a)
+# 2
+
+#2. 修改下标索引值 类似更新操作
+name[0]=&quot;蓝幽&quot; #更新下标为0的值
+print(name)
+#[&#39;蓝幽&#39;, &#39;you&#39;, &#39;I&#39;, &#39;like&#39;]
+
+#3. 插入列表值，类似增操作,但不能插入到最后的位置
+name.insert(2,&quot;love&quot;)
+print(name)
+# [&#39;蓝幽&#39;, &#39;you&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;]
+
+#4. 插入列表值，也是增操作，将数据插入到最后的位置
+name.append(&quot;you&quot;)
+print(name)
+#[&#39;蓝幽&#39;, &#39;you&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;]
+
+#5. 插入一批新元素
+a=[1,2,3]
+name.extend(a)
+print(name)
+# [&#39;蓝幽&#39;, &#39;you&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;, 1, 2, 3]
+
+#6. 删除，有两种方式
+# 1.  del 列表[下标]  只能删除一个元素
+del name[8]
+print(name)
+# [&#39;蓝幽&#39;, &#39;you&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;, 1, 2]
+# 2.  列表.pop(下标),这个方法与del的不同在于，这个是取出对应下标值，可以把取出的值传给立一个变量
+b=name.pop(7)
+print(name)
+print(b)
+# [&#39;蓝幽&#39;, &#39;you&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;, 1]
+# 2
+
+#7. 删除匹配项remove(),注意：remove删除的是从前往后匹配到的第一个值，只能删除一个，删除多个需要多次调用
+name.remove(&quot;you&quot;)
+print(name)
+# [&#39;蓝幽&#39;, &#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;, 1]
+
+#8. 清空列表
+name.clear()
+print(name)
+# []
+
+#9. 统计列表内某元素的数量
+name1=[&#39;蓝幽&#39;, &quot;you&quot;,&#39;love&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;, 1]
+num=name1.count(&quot;you&quot;)
+print(f&quot;name1中的you有:&#123;num&#125;个&quot;)
+# name1中的you有:2个
+ 
+#10. 统计列表内全部元素的数量 也就是长度len()
+c=len(name1)
+print(c)
+# 7
+</code></pre><h4 id="3-list操作练习案例"><a href="#3-list操作练习案例" class="headerlink" title="3.list操作练习案例"></a>3.list操作练习案例</h4><pre><code class="py">&quot;&quot;&quot;
+有一个列表，内容是：121,25,21,23,22,20]，记录的是一批学生的年龄
+请通过列表的功能（方法），对其进行
+1. 定义这个列表，并用变量接收它
+2. 追加一个数字31，到列表的尾部
+3. 追加一个新列表(29,33，30]，到列表的尾部
+4. 取出第一个元素（应是：21
+5. 取出最后一个元素（应是：30）
+6. 查找元素31，在列表中的下标位置
+&quot;&quot;&quot;
+age=[21,25,21,23,22,20]
+age.append(31)
+a=[29,33,30]
+age.extend(a)
+age.pop(0)
+age.pop(-1)
+age.index(31)
+</code></pre><h4 id="4-list遍历"><a href="#4-list遍历" class="headerlink" title="4.list遍历"></a>4.list遍历</h4><pre><code class="py"># while循环遍历,输出列表内的元素
+def name():
+    i=0
+    a=[&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;]
+    while i&lt;len(a):
+        b=a[i]
+        print(b)
+        i+=1
+name()        
+# for循环遍历        
+def num():    
+    a=[&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;] 
+    for i in a:
+        print(i)             
+num()        
+# 练习案例
+&quot;&quot;&quot;
+
+练习案例：取出列表内的偶数
+定义一个列表，内容是：[1,2,3,4,5,6,7,8,9,10]
+• 遍历列表，取出列表内的偶数，并存入一个新的列表对象中
+使用while循环和for循环各操作一次
+D:Idevlpythonlpython3.10.4lpython.exe D:/python-learn/05_数据容器/test.py
+通过while循环，从列表：[1，2，3，4，5，6，7，8，9，10]中取出偶数，组成新列表：[2，4,6，8, 10]
+通过for循环，从列表：[1，2，3，4,5，6，7，8，9，10]中取出偶数，组成新列表：[2,4,6,8,10]
+提示：
+• 通过f判断来确认偶数
+通过列表的append方法，来增加元素
+&quot;&quot;&quot;   
+# while循环           
+a=[1,2,3,4,5,6,7,8,9,10]
+b=[]
+i=0
+while  i&lt;len(a):
+    c=a[i]
+    if c%2==0:
+        b.append(c)
+    i+=1
+print(b) 
+c=[]
+# for循环
+for i in a:
+    if i%2==0:
+        c.append(i)
+print(c)         
+</code></pre><h4 id="5-tuple元组"><a href="#5-tuple元组" class="headerlink" title="5.tuple元组"></a>5.tuple元组</h4><pre><code class="py"># 元组的定义
+a=(1,2,3)
+b=()
+c=tuple()
+# 元组定义单个元素
+d=(&quot;lan&quot;)
+print(type(d),d)
+# str lan为字符串类型
+d=(&quot;you&quot;,)# 注意逗号
+print(type(d),d)
+# tuple you
+
+#元祖的嵌套,索引同列表一样
+a=((1,2,3),(4,5,6))
+f=(&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;)
+# 元组的操作index
+print(f.index(&quot;I&quot;)) #2
+# count
+num=f.count(&quot;you&quot;)
+print(num)  #2
+# len
+num1=len(f)
+print(num1)  #5
+
+# while循环
+i=0
+name=(&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;)
+while i&lt;len(name):
+    print(f&quot;name里有元素:&#123;name[i]&#125;&quot;)
+    i+=1
+# for循环
+for j in name:
+    print(j)    
+# 元组不能被修改，但是元素里面的列表可以被修改
+a1=(1,2,[3,4,5])  
+print(a1)
+a1[2][1]=&quot;you&quot;
+a1[2][0]=&quot;lan&quot;
+a1[2][2]=&quot;like&quot;
+print(a1)  
+#(1, 2, [3, 4, 5])
+#(1, 2, [&#39;lan&#39;, &#39;you&#39;, &#39;like&#39;])
+
+&quot;&quot;&quot;
+定义一个元组，内容是：（&#39;周杰轮&#39;，11, [&#39;footbal!&#39;,&#39;music]），记录的是一个学生的信息（姓名、年
+龄、爱好）
+请通过元组的功能（方法），对其进行
+1. 查询其年龄所在的下标位置
+2. 查询学生的姓名
+3. 删除学生爱好中的football
+4. 增加爱好：coding到爱好list内
+&quot;&quot;&quot;
+student=(&quot;蓝幽&quot;,21,[&quot;football&quot;,&quot;music&quot;])
+print(student.index(21))
+print(student[1])
+student[2].remove(&quot;football&quot;)
+print(student)
+student[2].append(&quot;coding&quot;)
+print(student)
+</code></pre><h4 id="6-字符串"><a href="#6-字符串" class="headerlink" title="6.字符串"></a>6.字符串</h4><pre><code class="py"># 字符串容器，为不可修改容器
+a=&quot;lanyou I like you&quot;
+# 取下标
+b=a[2]
+c=a[-16]
+print(b,c)# n,a
+# index 方法  索引下标
+value=a.index(&quot;like&quot;)
+print(f&quot;like再a中的起始下标是&#123;value&#125;&quot;) # 9
+# replace 方法， 替换 注意这个方法不是修改字符串，而是得到一个新的字符串
+value1=a.replace(&quot;lanyou&quot;,&quot;蓝幽&quot; )
+print(a,value1)
+#lanyou I like you  蓝幽 I like you
+
+# split 方法  分割
+value2=a.split(&quot;,&quot;) 
+print(value2) #[&#39;lanyou I like you&#39;]
+value3=a.split(&quot; &quot;)
+print(value3) #[&#39;lanyou&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;] 类型为列表
+ 
+#strip 方法 去除前后空格或内容,可传参，也可不传参
+a=&quot;lanyou I like you&quot;
+b=a.strip()#默认去除前后空格
+print(b)# lanyou I like you
+c=a.strip(&quot;l&quot;)
+print(c)# anyou I like you
+
+# count 统计对应字符出现的次数
+num=a.count(&quot;y&quot;) 
+print(num)# 2
+
+# len 统计长度
+b=len(a)
+print(b)
+# 17
+# 练习案例
+&quot;&quot;&quot;
+1.统计宇符串内有多少个&quot;it&quot;字符
+2.将字符串内的空格，全部替换为字符：&quot;|&quot;
+3.并按照&quot;|&quot;进行字符串分割，得到列表
+&quot;&quot;&quot;
+a=&quot;lanyou I like you&quot;
+print(a.count(&quot;l&quot;))
+b=a.replace(&quot; &quot;, &quot;|&quot;)
+print(b)
+c=b.split(&quot;|&quot;)
+print(c)
+&quot;&quot;&quot;
+2
+lanyou|I|like|you
+[&#39;lanyou&#39;, &#39;I&#39;, &#39;like&#39;, &#39;you&#39;]
+&quot;&quot;&quot;
+</code></pre><h4 id="7-序列的切片"><a href="#7-序列的切片" class="headerlink" title="7.序列的切片"></a>7.序列的切片</h4><pre><code class="py"># 序列指 列表，元组，字符串，也是不可修改
+# 列表的切片
+a=[1,2,3,4,5,6]
+b=a[1:5:1]# [起始下标：结束下标：步长]步长不写默认为1,注意，步长为负值也是可以的，这样会从后往前开始记入
+print(b)#[2, 3, 4, 5]
+
+# 元组的切片
+a=(1,2,3,4,5,6)
+b=a[0:3]
+print(b)# (1, 2, 3)
+
+# 字符串的切片
+a=&quot;lanyou&quot;
+b=a[0:5:2]
+print(b)#lno
+
+#序列反转
+b=a[::][::-1]
+print(b)
+#uoynal
+
+&quot;&quot;&quot;
+练习案例
+有字符串：方过薪月，员序程马黑来，nohtyP学&quot;
+•请使用学过的任何方式，得到&quot;黑马程序员&quot;
+可用方式参考：
+•倒序字符串，切片取出或切片取出，然后倒序
+split分隔&quot;，&quot;replace替换&quot;来&quot;为空，倒序字符串
+&quot;&quot;&quot;
+name=&quot;方过薪月,员序程马黑来,nohtyP学&quot;
+c=name[::-1][9:14]
+print(c) # 先倒后取
+d=name[5:10][::-1]
+print(d)# 先取后倒
+</code></pre><h4 id="8-集合的定义和操作"><a href="#8-集合的定义和操作" class="headerlink" title="8.集合的定义和操作"></a>8.集合的定义和操作</h4><pre><code class="py">#列表可修改、支持重复元素且有扇
+#元组、宇符串不可修改、支持重复元素且有序
+#而set集合就是不能重复且无序
+
+#定义集合
+a=&#123;&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;&#125;
+print(a)#&#123;&#39;you&#39;, &#39;lan&#39;, &#39;I&#39;, &#39;like&#39;&#125;随机排序且去重
+b=set() #定义空集，不能&#123;&#125;,因为&#123;&#125;被字典占用了
+print(b)# set()
+
+# 集合添加
+a=&#123;&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;&#125;
+a.add(&quot;love&quot;)
+print(a)
+#&#123;&#39;I&#39;, &#39;lan&#39;, &#39;like&#39;, &#39;love&#39;, &#39;you&#39;&#125;
+
+# 集合移除
+a=&#123;&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;&#125;
+a.remove(&quot;I&quot;)
+print(a)
+#&#123;&#39;like&#39;, &#39;you&#39;, &#39;lan&#39;&#125;
+
+# 集合取出
+a=&#123;&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;&#125;
+b=a.pop()#因为集合内部是无序的，所以也可认为是随机取出
+print(a,b)
+#&#123;&#39;you&#39;, &#39;like&#39;, &#39;I&#39;&#125; lan
+
+# 清空集合
+a=&#123;&quot;lan&quot;,&quot;you&quot;,&quot;I&quot;,&quot;like&quot;,&quot;you&quot;&#125;
+a.clear()
+print(a)
+#set()
+
+#集合的差集，但不会改变a集合和b集合
+a=&#123;1,2,3&#125;
+b=&#123;1,4,5&#125;
+c=a.difference(b)#意思可以认为是：a集合里面有哪些是和b集合是不同的，可以传
+print(c) # &#123;2,3&#125; 
+ 
+# 集合的差集并改变集合。消除差集
+a=&#123;1,2,3&#125;
+b=&#123;1,4,5&#125;
+c=a.difference_update(b)# 不能被传
+print(c)# none
+print(a)# &#123;2,3&#125;
+print(b)#&#123;1,4,5&#125;
+
+# 集合合并
+a=&#123;1,2,3&#125;
+b=&#123;1,4,5&#125;
+c=a.union(b)
+print(c)# &#123;1,2,3,4,5&#125;
+
+# 统计集合元素数量len()
+a=&#123;1,2,3,4,5,6,7,6,5&#125;
+num=len(a)
+print(num)# 7
+
+# 集合的遍历，因为集合内部元素是没有下标的，所以不能用while循环，只能for循环
+for x in a:
+    print(f&quot;a中有元素：&#123;x&#125;&quot;)
+&quot;&quot;&quot;
+a中有元素：1
+a中有元素：2
+a中有元素：3
+a中有元素：4
+a中有元素：5
+a中有元素：6
+a中有元素：7
+&quot;&quot;&quot;  
+&quot;&quot;&quot;
+练习案例
+有如下列表对象：
+mylist=[黑马程序员&#39;，&#39;传智播客！，&quot;黑马程序员&#39;，&quot;传智播客&#39;，&#39;itheima&#39;, &quot;itcast&#39;, &quot;itheima&#39;, &#39;itcast!
+&#39;best&#39;]
+请：
+• 定义一个空集合
+通过for循环遍历列表
+在for循环中将列表的元素添加至集合
+最终得到元素去重后的集合对象，并打印输出
+&quot;&quot;&quot;  
+mylist=[&#39;黑马程序员&#39;,&#39;传智播客！，&quot;黑马程序员&#39;,&#39;传智播客&#39;,&#39;itheima&#39;, &#39;itcast&#39;, &#39;itheima&#39;, &#39;itcast!&#39;,&#39;best&#39;]
+b=set()
+for x in mylist:  
+    b.add(x)
+print(b)
+#&#123;&#39;itcast!&#39;, &#39;黑马程序员&#39;, &#39;传智播客&#39;, &#39;itcast&#39;, &#39;itheima&#39;, &#39;传智播客！，&quot;黑马程序员&#39;, &#39;best&#39;&#125;
+</code></pre><h4 id="9-字典"><a href="#9-字典" class="headerlink" title="9.字典"></a>9.字典</h4><pre><code class="py"># 字典定义
+a=&#123;&#125;
+a=dict()
+a=&#123;&quot;key&quot; :99&#125;# key不可为字典，就是说这里的a不能用key
+#字典内数据不能重复，后面重复的value会替代前面的value
+a=&#123;&quot;key&quot;:99,&quot;key&quot;:88&#125;
+print(a)#&#123;&quot;key&quot;:88&#125;
+#基于key取出value
+a=&#123;&quot;ll&quot;:33,&quot;kk&quot;:90,&quot;lo&quot;:80&#125;
+print(a[&quot;ll&quot;])# 33
+#定义嵌套字典
+a=&#123;&quot;lan&quot;:&#123;&quot;语文&quot;:98,&quot;数学&quot;:78,&quot;英语&quot;:90&#125;,
+   &quot;you&quot;:&#123;&quot;语文&quot;:97,&quot;数学&quot;:74,&quot;英语&quot;:39&#125;,
+    &quot;ya&quot;:&#123;&quot;语文&quot;:95,&quot;数学&quot;:70,&quot;英语&quot;:60&#125;
+    &#125;
+b=a[&quot;ya&quot;][&quot;语文&quot;]
+print(b)# 95
+
+#字典的常用操作
+# 1.获取对于的key值
+a=&#123;&quot;a&quot;:1,&quot;b&quot;:2,&quot;c&quot;:3,&quot;d&quot;:4&#125;
+print(a[&quot;c&quot;])#3
+# 2.添加和更新字典
+a[&quot;f&quot;]=5#有值就是添加
+a[&quot;d&quot;]=3.3#重复key就是更新
+# 3.删除
+fun=a.pop(&quot;a&quot;)
+# 4.清空字典
+a.clear() 
+# 5.获取字典全部key
+fun1=a.keys()
+print(fun1)
+#6.计算字典元素数量
+len(a)
+# 案例 给级别为2的人加一级并加工资1000
+name=&#123;&quot;wulihong&quot;:&#123;&quot;部门:&quot;:&quot;科技部&quot;,&quot;工资&quot;:3000,&quot;级别&quot;:1&#125;,
+      &quot;zhoujielun&quot;:&#123;&quot;部门:&quot;:&quot;市场部&quot;,&quot;工资&quot;:5000,&quot;级别&quot;:2&#125;,
+      &quot;zhangsan&quot;:&#123;&quot;部门:&quot;:&quot;科技部&quot;,&quot;工资&quot;:7000,&quot;级别&quot;:3&#125;&#125;
+for x in name.keys():
+    #print(name.keys())
+   # print(x)
+    if name[x][&quot;级别&quot;]==2:
+        name[x][&quot;级别&quot;]+=1
+        name[x][&quot;工资&quot;]+=1000
+print(name)        
+</code></pre><h4 id="10-各容器对比及转换排序"><a href="#10-各容器对比及转换排序" class="headerlink" title="10.各容器对比及转换排序"></a>10.各容器对比及转换排序</h4><pre><code class="py">a1=[1,2,3,4,5]
+a2=(1,2,3,4,5)
+a3=&quot;abcdefg&quot;
+a4=&#123;1,2,3,4,5&#125;
+a5=&#123;&quot;key1&quot;:1,&quot;key2&quot;:2,&quot;key3&quot;:3,&quot;key4&quot;:4,&quot;key5&quot;:5&#125;
+# len(),man(),min(),list(),tuple(),str(),set(),dict()
+#len()跳过
+# max()
+print(max(a1))#5
+print(max(a2))#5
+print(max(a3))#g
+print(max(a4))#5
+print(max(a5))#key5
+#min同理取最小
+
+#list()
+print(list(a1))#[1, 2, 3, 4, 5]
+print(list(a2))#[1, 2, 3, 4, 5]
+print(list(a3))#[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]
+print(list(a4))#[1, 2, 3, 4, 5]
+print(list(a5))#[&#39;key1&#39;, &#39;key2&#39;, &#39;key3&#39;, &#39;key4&#39;, &#39;key5&#39;]
+
+#tuple()
+print(tuple(a1))#(1, 2, 3, 4, 5)
+print(tuple(a2))#(1, 2, 3, 4, 5)
+print(tuple(a3))#(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;)
+print(tuple(a4))#(1, 2, 3, 4, 5)
+print(tuple(a5))#(&#39;key1&#39;, &#39;key2&#39;, &#39;key3&#39;, &#39;key4&#39;, &#39;key5&#39;)
+
+#str()
+print(str(a1))#&quot;[1, 2, 3, 4, 5]&quot;
+print(str(a2))#&quot;(1, 2, 3, 4, 5)&quot;
+print(str(a3))#&quot;abcdefg&quot;
+print(str(a4))#&quot;&#123;1, 2, 3, 4, 5&#125;&quot;
+print(str(a5))#&quot;&#123;&#39;key1&#39;: 1, &#39;key2&#39;: 2, &#39;key3&#39;: 3, &#39;key4&#39;: 4, &#39;key5&#39;: 5&#125;&quot;
+
+# set()
+print(set(a1))#&#123;1, 2, 3, 4, 5&#125;
+print(set(a2))#&#123;1, 2, 3, 4, 5&#125;
+print(set(a3))#&#123;&#39;g&#39;, &#39;b&#39;, &#39;e&#39;, &#39;a&#39;, &#39;c&#39;, &#39;f&#39;, &#39;d&#39;&#125;
+print(set(a4))#&#123;1, 2, 3, 4, 5&#125;
+print(set(a5))#&#123;&#39;key5&#39;, &#39;key3&#39;, &#39;key4&#39;, &#39;key2&#39;, &#39;key1&#39;&#125;
+
+#dict() 其他列表不能转字典，因为字典内存在键值对
+
+#排序 从小到大
+print(sorted(a1))
+print(sorted(a2))
+print(sorted(a3))
+print(sorted(a4))
+print(sorted(a5))
+
+# 从大到小
+print(sorted(a1,reverse=True))
+print(sorted(a2,reverse=True))
+print(sorted(a3,reverse=True))
+print(sorted(a4,reverse=True))
+print(sorted(a5,reverse=True))
+</code></pre><h4 id="11-字符串如何比较大小"><a href="#11-字符串如何比较大小" class="headerlink" title="11.字符串如何比较大小"></a>11.字符串如何比较大小</h4><pre><code class="py"># 字符串如何比较大小
+# 从头大尾，一位一位比较，，其中一位大，后面无需比较
+# 单个字符如何确定大小
+# 通过ascll表比较 A=65 Z=90 a=97 z=122
+</code></pre></div><div id="comments"><div id="twikoo-container"></div></div></div><span class="js-cursor-container"></span><footer id="footer"><div class="footer-wrap"><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("12/25/2022 13:14:21");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="<br />本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒😘"}setInterval("createtime()",250)</script><div>© 2022 - 2023 蓝幽の小屋 <span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>@蓝幽呀</div><div></div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/chi1314/hexo-theme-particlex">ParticleX Theme</a></div><div>备案号： <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">赣ICP备2023002049号</a></div></div><div style="width:300px;margin:0 auto;padding:0 0"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36098102000253" style="display:inline-block;text-decoration:none;height:20px;line-height:20px"><img src="./image/备案图标.png" style="float:left"><p style="float:left;height:20px;line-height:20px;margin:0 0 0 5px;color:#939393">赣公网安备 36098102000253号</p></a></div></footer></div></div></transition><div id="showimg"><img id="showimg-content" alt="showimg"></div></div><script>window.onload=function(){document.getElementById("l").style.transform="scaleX(0)",document.getElementById("r").style.transform="scaleX(0)"}</script><script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script><script src="/js/sakura.js"></script><script src="/js/%E8%B7%9F%E9%9A%8F%E6%98%9F%E6%98%9F%E7%89%B9%E6%95%88.js"></script><script src="/js/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88.js"></script><script src="/js/function.js"></script><script src="/js/particlex.js"></script><script src="https://cdn.staticfile.org/twikoo/1.6.9/twikoo.all.min.js"></script><script>twikoo.init({el:"#twikoo-container",envId:"https://twikoo.lanyou.me",region:"",path:location.pathname,lang:"zh-CN"})</script><div class="aa"></div><div class="aa1"></div><div class="aa2"></div><div class="aa3"></div><div class="aa4"></div><div class="aa5"></div><div class="aa6"></div><div class="aa7"></div><link rel="stylesheet" href="/css/APlayer.min.css"><div data-pjax id="aplayer"></div><script src="/js/APlayer.min.js"></script><script src="/js/%E9%9F%B3%E4%B9%90%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E5%B1%95%E7%A4%BA.js"></script><script src="/js/%E9%9F%B3%E4%B9%90.js"></script><script src="/js/2.js"></script></body></html>

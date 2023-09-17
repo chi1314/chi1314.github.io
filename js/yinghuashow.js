@@ -1,0 +1,1 @@
+screen.width<640?document.write('<script type="text/javascript" src="/js/1.js"><\/script>'):document.write('<script type="text/javascript" src="/js/yinghua.js"><\/script>');
